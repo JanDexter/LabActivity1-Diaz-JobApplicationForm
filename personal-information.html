@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information - Job Application</title>
+</head>
+<body>
+    <header>
+        <h1>Job Application Form</h1>
+    </header>
+
+    <nav aria-label="Application progress">
+        <ol>
+            <li><strong>Personal Information</strong></li>
+            <li><a href="position.html">Position Details</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education-skills.html">Education & Skills</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Personal Information</h2>
+            <form method="POST" action="/submit-application">
+                <fieldset>
+                    <legend>Contact Details</legend>
+
+                    <div>
+                        <label for="firstName">First Name <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="lastName">Last Name <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="email">Email Address <span aria-label="required">*</span></label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone Number <span aria-label="required">*</span></label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            pattern="[0-9\-\(\)\s\+]+"
+                            required
+                            aria-required="true"
+                            aria-describedby="phoneHint"
+                        />
+                        <small id="phoneHint">Format: (123) 456-7890 or +1-234-567-8900</small>
+                    </div>
+
+                    <div>
+                        <label for="address">Street Address <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="address"
+                            name="address"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="city">City <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="state">State/Province <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="state"
+                            name="state"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="zipcode">ZIP/Postal Code <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="zipcode"
+                            name="zipcode"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="country">Country <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="country"
+                            name="country"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+
+                    <div>
+                        <label for="dob">Date of Birth <span aria-label="required">*</span></label>
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="citizenship">Citizenship Status <span aria-label="required">*</span></label>
+                        <select id="citizenship" name="citizenship" required aria-required="true">
+                            <option value="">-- Select --</option>
+                            <option value="citizen">Citizen</option>
+                            <option value="permanent-resident">Permanent Resident</option>
+                            <option value="visa">Work Visa Holder</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <fieldset>
+                        <legend>Communication Preference</legend>
+                        <div>
+                            <input
+                                type="radio"
+                                id="prefEmail"
+                                name="communicationPreference"
+                                value="email"
+                                checked
+                            />
+                            <label for="prefEmail">Email</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                id="prefPhone"
+                                name="communicationPreference"
+                                value="phone"
+                            />
+                            <label for="prefPhone">Phone</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                id="prefBoth"
+                                name="communicationPreference"
+                                value="both"
+                            />
+                            <label for="prefBoth">Both</label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+
+                <div>
+                    <button type="submit" formaction="position.html">Next: Position Details</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jan Dexter Diaz. Job Application Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

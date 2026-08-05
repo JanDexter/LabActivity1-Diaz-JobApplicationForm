@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Details - Job Application</title>
+</head>
+<body>
+    <header>
+        <h1>Job Application Form</h1>
+    </header>
+
+    <nav aria-label="Application progress">
+        <ol>
+            <li><a href="personal-information.html">Personal Information</a></li>
+            <li><strong>Position Details</strong></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education-skills.html">Education & Skills</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Position Details</h2>
+            <form method="POST" action="/submit-application">
+                <fieldset>
+                    <legend>Position Information</legend>
+
+                    <div>
+                        <label for="positionTitle">Position Title <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="positionTitle"
+                            name="positionTitle"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="department">Department <span aria-label="required">*</span></label>
+                        <select id="department" name="department" required aria-required="true">
+                            <option value="">-- Select --</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="sales">Sales</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="operations">Operations</option>
+                            <option value="human-resources">Human Resources</option>
+                            <option value="finance">Finance</option>
+                            <option value="customer-support">Customer Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="employmentType">Employment Type <span aria-label="required">*</span></label>
+                        <select id="employmentType" name="employmentType" required aria-required="true">
+                            <option value="">-- Select --</option>
+                            <option value="full-time">Full-Time</option>
+                            <option value="part-time">Part-Time</option>
+                            <option value="contract">Contract</option>
+                            <option value="temporary">Temporary</option>
+                            <option value="internship">Internship</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="startDate">Preferred Start Date <span aria-label="required">*</span></label>
+                        <input
+                            type="date"
+                            id="startDate"
+                            name="startDate"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <fieldset>
+                        <legend>Expected Salary (Annual) <span aria-label="required">*</span></legend>
+
+                        <div>
+                            <label for="currency">Currency <span aria-label="required">*</span></label>
+                            <select id="currency" name="currency" required aria-required="true">
+                                <option value="">-- Select --</option>
+                                <option value="USD">USD - US Dollar</option>
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="GBP">GBP - British Pound</option>
+                                <option value="JPY">JPY - Japanese Yen</option>
+                                <option value="CAD">CAD - Canadian Dollar</option>
+                                <option value="AUD">AUD - Australian Dollar</option>
+                                <option value="CHF">CHF - Swiss Franc</option>
+                                <option value="CNY">CNY - Chinese Yuan</option>
+                                <option value="INR">INR - Indian Rupee</option>
+                                <option value="PHP">PHP - Philippine Peso</option>
+                                <option value="SGD">SGD - Singapore Dollar</option>
+                                <option value="KRW">KRW - South Korean Won</option>
+                                <option value="BRL">BRL - Brazilian Real</option>
+                                <option value="MXN">MXN - Mexican Peso</option>
+                                <option value="AED">AED - UAE Dirham</option>
+                                <option value="SEK">SEK - Swedish Krona</option>
+                                <option value="NZD">NZD - New Zealand Dollar</option>
+                                <option value="ZAR">ZAR - South African Rand</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="salary">Amount <span aria-label="required">*</span></label>
+                            <input
+                                type="number"
+                                id="salary"
+                                name="salary"
+                                required
+                                aria-required="true"
+                            />
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Work Location Preference</legend>
+                        <div>
+                            <input
+                                type="radio"
+                                id="locRemote"
+                                name="workLocation"
+                                value="remote"
+                                required
+                            />
+                            <label for="locRemote">Remote</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                id="locOnsite"
+                                name="workLocation"
+                                value="onsite"
+                            />
+                            <label for="locOnsite">On-Site</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                id="locHybrid"
+                                name="workLocation"
+                                value="hybrid"
+                            />
+                            <label for="locHybrid">Hybrid</label>
+                        </div>
+                    </fieldset>
+
+                    <div>
+                        <label for="workHours">Preferred Work Hours Per Week <span aria-label="required">*</span></label>
+                        <input
+                            type="number"
+                            id="workHours"
+                            name="workHours"
+                            min="1"
+                            max="80"
+                            required
+                            aria-required="true"
+                            aria-describedby="workHoursHint"
+                        />
+                        <small id="workHoursHint">Enter between 1 and 80 hours</small>
+                    </div>
+
+                    <fieldset>
+                        <legend>Do you require visa sponsorship? <span aria-label="required">*</span></legend>
+                        <div>
+                            <input
+                                type="radio"
+                                id="visaYes"
+                                name="visaSponsorship"
+                                value="yes"
+                                required
+                            />
+                            <label for="visaYes">Yes</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                id="visaNo"
+                                name="visaSponsorship"
+                                value="no"
+                            />
+                            <label for="visaNo">No</label>
+                        </div>
+                    </fieldset>
+
+                    <div>
+                        <label for="referralSource">How did you hear about this position?</label>
+                        <select id="referralSource" name="referralSource">
+                            <option value="">-- Select --</option>
+                            <option value="job-board">Job Board</option>
+                            <option value="company-website">Company Website</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="referral">Employee Referral</option>
+                            <option value="recruiter">Recruiter</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Requirements</legend>
+
+                    <div>
+                        <label for="coverLetter">Cover Letter <span aria-label="required">*</span></label>
+                        <textarea
+                            id="coverLetter"
+                            name="coverLetter"
+                            rows="6"
+                            required
+                            aria-required="true"
+                            aria-describedby="coverLetterHint"
+                        ></textarea>
+                        <small id="coverLetterHint">Tell us why you are interested in this position</small>
+                    </div>
+
+                    <fieldset>
+                        <legend>Availability</legend>
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="immediateAvail"
+                                name="immediateAvailability"
+                                value="yes"
+                            />
+                            <label for="immediateAvail">Available immediately</label>
+                        </div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="travelWilling"
+                                name="travelWilling"
+                                value="yes"
+                            />
+                            <label for="travelWilling">Willing to travel (up to 25%)</label>
+                        </div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="relocationWilling"
+                                name="relocationWilling"
+                                value="yes"
+                            />
+                            <label for="relocationWilling">Willing to relocate</label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+
+                <div>
+                    <button type="button" onclick="window.location.href='personal-information.html'">Back</button>
+                    <button type="submit" formaction="experience.html">Next: Experience</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jan Dexter Diaz. Job Application Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education & Skills - Job Application</title>
+</head>
+<body>
+    <header>
+        <h1>Job Application Form</h1>
+    </header>
+
+    <nav aria-label="Application progress">
+        <ol>
+            <li><a href="personal-information.html">Personal Information</a></li>
+            <li><a href="position.html">Position Details</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><strong>Education & Skills</strong></li>
+        </ol>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Education & Skills</h2>
+            <form method="POST" action="/submit-application">
+                <fieldset>
+                    <legend>Highest Level of Education</legend>
+
+                    <div>
+                        <label for="educationLevel">Education Level <span aria-label="required">*</span></label>
+                        <select id="educationLevel" name="educationLevel" required aria-required="true">
+                            <option value="">-- Select --</option>
+                            <option value="high-school">High School Diploma</option>
+                            <option value="associate">Associate Degree</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="doctorate">Doctorate/Ph.D</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="institution">Educational Institution <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="institution"
+                            name="institution"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="fieldOfStudy">Field of Study <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="fieldOfStudy"
+                            name="fieldOfStudy"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="graduationDate">Graduation Date <span aria-label="required">*</span></label>
+                        <input
+                            type="date"
+                            id="graduationDate"
+                            name="graduationDate"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="gpa">GPA (if applicable)</label>
+                        <input
+                            type="number"
+                            id="gpa"
+                            name="gpa"
+                            min="0"
+                            max="4"
+                            step="0.01"
+                            aria-describedby="gpaHint"
+                        />
+                        <small id="gpaHint">Scale: 0.00 - 4.00</small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Professional Certifications</legend>
+
+                    <div>
+                        <label for="certifications">List Any Relevant Certifications</label>
+                        <textarea
+                            id="certifications"
+                            name="certifications"
+                            rows="4"
+                            aria-describedby="certificationsHint"
+                        ></textarea>
+                        <small id="certificationsHint">Example: CPA, PMP, Six Sigma, SHRM-CP, Real Estate License, etc.</small>
+                    </div>
+
+                    <div>
+                        <label for="certDocs">Certification Documents</label>
+                        <input
+                            type="file"
+                            id="certDocs"
+                            name="certDocs"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            aria-describedby="certDocsHint"
+                        />
+                        <small id="certDocsHint">Accepted formats: PDF, JPG, PNG (max 5 MB)</small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Professional Skills</legend>
+
+                    <div>
+                        <label for="primarySkills">Primary Skills <span aria-label="required">*</span></label>
+                        <textarea
+                            id="primarySkills"
+                            name="primarySkills"
+                            rows="4"
+                            required
+                            aria-required="true"
+                            aria-describedby="primarySkillsHint"
+                        ></textarea>
+                        <small id="primarySkillsHint">List the main skills relevant to the position you are applying for</small>
+                    </div>
+
+                    <fieldset>
+                        <legend>Skill Areas (select all that apply)</legend>
+                        <div>
+                            <input type="checkbox" id="skillAdmin" name="skillAreas" value="administration" />
+                            <label for="skillAdmin">Administration &amp; Office Management</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillFinance" name="skillAreas" value="finance" />
+                            <label for="skillFinance">Finance &amp; Accounting</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillMarketing" name="skillAreas" value="marketing" />
+                            <label for="skillMarketing">Marketing &amp; Communications</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillSales" name="skillAreas" value="sales" />
+                            <label for="skillSales">Sales &amp; Customer Service</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillIT" name="skillAreas" value="it" />
+                            <label for="skillIT">Information Technology</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillEngineering" name="skillAreas" value="engineering" />
+                            <label for="skillEngineering">Engineering &amp; Manufacturing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillHealthcare" name="skillAreas" value="healthcare" />
+                            <label for="skillHealthcare">Healthcare &amp; Medical</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillEducation" name="skillAreas" value="education" />
+                            <label for="skillEducation">Education &amp; Training</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillLegal" name="skillAreas" value="legal" />
+                            <label for="skillLegal">Legal &amp; Compliance</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillCreative" name="skillAreas" value="creative" />
+                            <label for="skillCreative">Creative &amp; Design</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillManagement" name="skillAreas" value="management" />
+                            <label for="skillManagement">Project Management</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillTrades" name="skillAreas" value="trades" />
+                            <label for="skillTrades">Skilled Trades &amp; Labor</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="skillOther" name="skillAreas" value="other" />
+                            <label for="skillOther">Other</label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Key Competencies</legend>
+
+                    <div>
+                        <label for="softSkills">Describe Your Key Strengths <span aria-label="required">*</span></label>
+                        <textarea
+                            id="softSkills"
+                            name="softSkills"
+                            rows="4"
+                            required
+                            aria-required="true"
+                            aria-describedby="softSkillsHint"
+                        ></textarea>
+                        <small id="softSkillsHint">Describe strengths relevant to any professional environment</small>
+                    </div>
+
+                    <fieldset>
+                        <legend>Select your top competencies</legend>
+                        <div>
+                            <input type="checkbox" id="teamwork" name="competencies" value="teamwork" />
+                            <label for="teamwork">Teamwork &amp; Collaboration</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="leadership" name="competencies" value="leadership" />
+                            <label for="leadership">Leadership</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="communication" name="competencies" value="communication" />
+                            <label for="communication">Communication</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="problemsolving" name="competencies" value="problemsolving" />
+                            <label for="problemsolving">Problem-Solving</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="timemanagement" name="competencies" value="timemanagement" />
+                            <label for="timemanagement">Time Management</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="adaptability" name="competencies" value="adaptability" />
+                            <label for="adaptability">Adaptability</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="creativity" name="competencies" value="creativity" />
+                            <label for="creativity">Creativity &amp; Innovation</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="attention-detail" name="competencies" value="attention-detail" />
+                            <label for="attention-detail">Attention to Detail</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="customerFocus" name="competencies" value="customer-focus" />
+                            <label for="customerFocus">Customer Focus</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="criticalThinking" name="competencies" value="critical-thinking" />
+                            <label for="criticalThinking">Critical Thinking</label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Languages Spoken</legend>
+
+                    <div>
+                        <label for="language1">Language 1 <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="language1"
+                            name="language1"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+                    <div>
+                        <label for="fluency1">Fluency Level <span aria-label="required">*</span></label>
+                        <select id="fluency1" name="fluency1" required aria-required="true">
+                            <option value="">-- Select --</option>
+                            <option value="native">Native / Mother Tongue</option>
+                            <option value="fluent">Fluent</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="basic">Basic</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="language2">Language 2</label>
+                        <input
+                            type="text"
+                            id="language2"
+                            name="language2"
+                        />
+                    </div>
+                    <div>
+                        <label for="fluency2">Fluency Level</label>
+                        <select id="fluency2" name="fluency2">
+                            <option value="">-- Select --</option>
+                            <option value="native">Native / Mother Tongue</option>
+                            <option value="fluent">Fluent</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="basic">Basic</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="language3">Language 3</label>
+                        <input
+                            type="text"
+                            id="language3"
+                            name="language3"
+                        />
+                    </div>
+                    <div>
+                        <label for="fluency3">Fluency Level</label>
+                        <select id="fluency3" name="fluency3">
+                            <option value="">-- Select --</option>
+                            <option value="native">Native / Mother Tongue</option>
+                            <option value="fluent">Fluent</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="basic">Basic</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Application Agreement</legend>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="agreeTerms"
+                            name="agreeTerms"
+                            required
+                            aria-required="true"
+                        />
+                        <label for="agreeTerms">
+                            I certify that the information provided in this application is true and complete <span aria-label="required">*</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="agreeBackground"
+                            name="agreeBackground"
+                            required
+                            aria-required="true"
+                        />
+                        <label for="agreeBackground">
+                            I agree to a background check and reference verification <span aria-label="required">*</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="agreeContact"
+                            name="agreeContact"
+                        />
+                        <label for="agreeContact">
+                            I agree to be contacted about future opportunities
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="button" onclick="window.location.href='experience.html'">Back</button>
+                    <button type="submit">Submit Application</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jan Dexter Diaz. Job Application Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

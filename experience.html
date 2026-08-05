@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Job Application</title>
+</head>
+<body>
+    <header>
+        <h1>Job Application Form</h1>
+    </header>
+
+    <nav aria-label="Application progress">
+        <ol>
+            <li><a href="personal-information.html">Personal Information</a></li>
+            <li><a href="position.html">Position Details</a></li>
+            <li><strong>Experience</strong></li>
+            <li><a href="education-skills.html">Education & Skills</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Work Experience</h2>
+            <form method="POST" action="/submit-application">
+                <fieldset>
+                    <legend>Current or Most Recent Position</legend>
+
+                    <div>
+                        <label for="currentJobTitle">Job Title <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="currentJobTitle"
+                            name="currentJobTitle"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="currentCompany">Company Name <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="currentCompany"
+                            name="currentCompany"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="currentIndustry">Industry <span aria-label="required">*</span></label>
+                        <input
+                            type="text"
+                            id="currentIndustry"
+                            name="currentIndustry"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="currentStartDate">Start Date <span aria-label="required">*</span></label>
+                        <input
+                            type="date"
+                            id="currentStartDate"
+                            name="currentStartDate"
+                            required
+                            aria-required="true"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="currentEndDate">End Date (leave blank if currently employed)</label>
+                        <input
+                            type="date"
+                            id="currentEndDate"
+                            name="currentEndDate"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="currentResponsibilities">Key Responsibilities <span aria-label="required">*</span></label>
+                        <textarea
+                            id="currentResponsibilities"
+                            name="currentResponsibilities"
+                            rows="4"
+                            required
+                            aria-required="true"
+                        ></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Previous Position</legend>
+
+                    <div>
+                        <label for="prevJobTitle">Job Title</label>
+                        <input
+                            type="text"
+                            id="prevJobTitle"
+                            name="prevJobTitle"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="prevCompany">Company Name</label>
+                        <input
+                            type="text"
+                            id="prevCompany"
+                            name="prevCompany"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="prevIndustry">Industry</label>
+                        <input
+                            type="text"
+                            id="prevIndustry"
+                            name="prevIndustry"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="prevStartDate">Start Date</label>
+                        <input
+                            type="date"
+                            id="prevStartDate"
+                            name="prevStartDate"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="prevEndDate">End Date</label>
+                        <input
+                            type="date"
+                            id="prevEndDate"
+                            name="prevEndDate"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="prevResponsibilities">Key Responsibilities</label>
+                        <textarea
+                            id="prevResponsibilities"
+                            name="prevResponsibilities"
+                            rows="4"
+                        ></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Experience Summary</legend>
+
+                    <div>
+                        <label for="totalExperience">Total Years of Experience <span aria-label="required">*</span></label>
+                        <select id="totalExperience" name="totalExperience" required aria-required="true">
+                            <option value="">-- Select --</option>
+                            <option value="0-1">Less than 1 year</option>
+                            <option value="1-3">1-3 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="5-10">5-10 years</option>
+                            <option value="10+">10+ years</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="achievements">Professional Achievements and Awards</label>
+                        <textarea
+                            id="achievements"
+                            name="achievements"
+                            rows="4"
+                            aria-describedby="achievementsHint"
+                        ></textarea>
+                        <small id="achievementsHint">Highlight any recognitions, promotions, or significant projects</small>
+                    </div>
+
+                    <div>
+                        <label for="reasonForChange">Reason for Leaving Your Current Role</label>
+                        <textarea
+                            id="reasonForChange"
+                            name="reasonForChange"
+                            rows="4"
+                        ></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Supporting Documents</legend>
+
+                    <div>
+                        <label for="resume">Resume/CV <span aria-label="required">*</span></label>
+                        <input
+                            type="file"
+                            id="resume"
+                            name="resume"
+                            accept=".pdf,.doc,.docx"
+                            required
+                            aria-required="true"
+                            aria-describedby="resumeHint"
+                        />
+                        <small id="resumeHint">Accepted formats: PDF, DOC, DOCX (max 5 MB)</small>
+                    </div>
+
+                    <div>
+                        <label for="referenceLetter">Reference Letter (Optional)</label>
+                        <input
+                            type="file"
+                            id="referenceLetter"
+                            name="referenceLetter"
+                            accept=".pdf,.doc,.docx"
+                            aria-describedby="referenceLetterHint"
+                        />
+                        <small id="referenceLetterHint">Accepted formats: PDF, DOC, DOCX (max 5 MB)</small>
+                    </div>
+
+                    <div>
+                        <label for="workSamplesUrl">Work Samples/Portfolio URL (Optional)</label>
+                        <input
+                            type="url"
+                            id="workSamplesUrl"
+                            name="workSamplesUrl"
+                            aria-describedby="workSamplesUrlHint"
+                        />
+                        <small id="workSamplesUrlHint">Link to your portfolio, GitHub, Behance, etc.</small>
+                    </div>
+
+                    <div>
+                        <label for="workSamplesFile">Work Samples File Upload (Optional)</label>
+                        <input
+                            type="file"
+                            id="workSamplesFile"
+                            name="workSamplesFile"
+                            accept=".pdf,.jpg,.jpeg,.png,.zip"
+                            aria-describedby="workSamplesFileHint"
+                        />
+                        <small id="workSamplesFileHint">Accepted formats: PDF, JPG, PNG, ZIP (max 5 MB)</small>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="button" onclick="window.location.href='position.html'">Back</button>
+                    <button type="submit" formaction="education-skills.html">Next: Education & Skills</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jan Dexter Diaz. Job Application Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
