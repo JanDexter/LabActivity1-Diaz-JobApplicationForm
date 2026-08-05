@@ -68,7 +68,7 @@ Collects job-specific preferences and requirements.
 
 | Section | Fields |
 |---------|--------|
-| Position Information | Position Title, Department, Employment Type, Preferred Start Date, Currency + Salary (grouped), Work Location Preference, Preferred Work Hours Per Week, Visa Sponsorship (Yes/No), Referral Source |
+| Position Information | Position Title, Department, Employment Type, Preferred Start Date, Currency + Salary (grouped), Work Location Preference, Preferred Work Hours Per Week, Visa Sponsorship (Yes/No/Not applicable - I am a citizen/permanent resident), Referral Source |
 | Additional Requirements | Cover Letter (textarea), Availability (checkboxes: immediate, travel, relocation) |
 
 ---
@@ -105,7 +105,9 @@ Collects educational background, professional skills, and final agreements.
 
 ---
 
-## Accessibility Features
+## Accessibility & SEO Features
+
+### Accessibility
 
 This form follows WCAG guidelines and accessible form design patterns:
 
@@ -116,6 +118,12 @@ This form follows WCAG guidelines and accessible form design patterns:
 - **Fieldset/Legend:** Related controls (radio buttons, checkboxes, grouped fields) are wrapped in `<fieldset>` with descriptive `<legend>` elements.
 - **Descriptive hints:** Complex fields use `aria-describedby` linked to `<small>` hint text (e.g., phone format, file size limits).
 - **Navigation:** An ordered list (`<ol>`) with `aria-label="Application progress"` indicates the multi-step progress, with the current step shown in bold.
+
+### SEO Optimization
+
+All pages include:
+- **Meta description:** Page-specific descriptions for search engine snippets
+- **Open Graph tags:** Social media sharing optimization (`og:title`, `og:description`, `og:type`)
 
 ---
 
